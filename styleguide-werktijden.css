@@ -1,0 +1,140 @@
+/* We gebruiken hier Cascade layers, wat mogelijke problemen met Specificiteit voorkomt
+   https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers
+   https://css-tricks.com/css-cascade-layers/ */
+  
+   
+@font-face {
+    font-family: 'Inter';
+    src: url(Inter_18pt-Bold.ttf), format(ttf)
+    ;
+     font-weight: bold;
+
+}
+
+    @font-face {
+    font-family: 'Inter';
+    src: url(Inter-VariableFont_opsz\,wght.ttf), format(ttf);
+  
+
+}
+
+
+
+@layer styleguide {
+
+    :root {
+        /* Kleuren */
+        --primary-color: #059669;
+        --dark-text: #394150;
+        --section-background:#f9fafb;
+        --border-color:#efe7eb;
+        --accent-light: #ffffff;
+         --accent-dark: #000000;
+
+        /* Typografie */
+        --headline: 24px;
+        --head: 18px;
+        --subhead: 16px;
+        --body: 16px;
+        --label: 14px;
+
+        --font-family: 'Inter', sans-serif;
+
+    
+    
+
+
+    
+}
+
+    }
+
+    body {
+        background-color: rgb(213, 213, 213);
+        font-family: var(--font-family);
+    }
+
+    #kleur figure:nth-of-type(1) code {
+        background: var(--primary-color);
+        color: var(--text);
+       
+    }
+
+    #kleur figure:nth-of-type(2) code {
+        background: var(--dark-text);
+        color: var(--background-dark);
+    }
+
+    #kleur figure:nth-of-type(3) code {
+        background: var(--section-background);
+        color: var(--background-dark);
+    }
+
+    #kleur figure:nth-of-type(4) code {
+        background: var(--border-color);
+        color: var(--background-dark);
+    }
+
+    #kleur figure:nth-of-type(5) code {
+        background: var(--accent);
+        color: var(--background-dark);
+    }
+
+
+
+
+    @layer generiek {
+
+  html, body {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    max-width: 40em;
+    margin: auto;
+    background: #fff;
+  }
+
+  nav:not([class]),
+  h1:not([class]),
+  h2:not([class]),
+  p:not([class]),
+  figcaption:not([class]) {
+  
+    line-height: 1.5;
+  }
+
+  p:not([class]) > code:not([class]) {
+    display: block;
+  }
+
+  fieldset:not([class]) {
+    margin-block: 1em;
+  }
+
+  nav:not([class]) > a {
+    padding: .5em;
+    border: 1px solid;
+    color: inherit;
+    text-decoration: none;
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  figure:not([class]) {
+    display: grid;
+    grid-template-columns: 6rem 1fr;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    > code {
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      aspect-ratio: 1;
+      background: #ccc;
+    }
+  }
+
+}
