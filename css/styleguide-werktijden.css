@@ -5,7 +5,7 @@
    
 @font-face {
     font-family: 'Inter';
-    src: url(Inter_18pt-Bold.ttf), format(ttf)
+    src: url(assets/Inter_18pt-Bold.ttf), format(ttf)
     ;
      font-weight: bold;
 
@@ -13,7 +13,7 @@
 
     @font-face {
     font-family: 'Inter';
-    src: url(Inter-VariableFont_opsz\,wght.ttf), format(ttf);
+    src: url(assets/Inter-VariableFont_opsz\,wght.ttf), format(ttf);
   
 
 }
