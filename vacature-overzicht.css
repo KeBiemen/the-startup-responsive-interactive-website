@@ -1,3 +1,12 @@
+
+body{
+margin: 0;
+padding: 0;
+}
+
+
+
+
 header {
   position: fixed;
   background-color: white;
@@ -68,16 +77,71 @@ margin-left: 7em;
 h1 {
   margin-top: 3em;
 
+  span{
+    color: var(--primary-color);
+  }
+
+}
+
+main {
+    padding: 1.5em;
 }
 
 
-article{ 
 
+article{ 
 border: 8px solid var(--primary-color);
 border-radius: 3em;
 margin: 1em;
 padding: 2em;
 width: fit-content;
+display: grid;
+grid-template-rows: 1fr 1fr 2fr 1fr;
+text-align: center;
+width: 20em;
+height: 25em;
+margin-top:5em;
+
+svg {grid-row-start: 1;
+justify-self: center;}
+
+button {
+grid-row-start: 1;
+height: 3em;
+width: 3em;
+background-color: white;
+border: none;
+}
+h2{
+ grid-row-start: 2;   
+}
+
+ul{list-style: none;
+display: flex;
+gap:.5em;
+flex-wrap: wrap;
+grid-row: 3 / 4;
+height: 1em;}
+
+
+li{background-color: #E8F8F1;
+ padding: 5px 10px;
+ padding-bottom: .5em;
+  border-radius: .5em;
+}
+
+a{grid-row-start: 5;
+text-decoration: none;
+background-color: var(--primary-color);
+color: white;
+border-radius: 1em;
+font-weight: bold;
+height: 2em;
+padding-top: 1em;
+justify-self: center;
+width: 15em;}
+
+
 
 p {
   clip: rect(0 0 0 0);
@@ -86,7 +150,27 @@ p {
   overflow: hidden;
   position: absolute;
   white-space: nowrap;
-  width: 1px;    
+  width: 1px;  
+   
 }
 }
 
+footer {
+padding: 2em;
+background-color: #121827;
+color: white;
+
+h3{
+    margin-left: 2em;
+}
+
+ul{
+    list-style: none;
+    
+};
+
+a{
+    text-decoration: none;
+    color: white;
+}
+}
