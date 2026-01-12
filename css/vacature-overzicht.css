@@ -2,6 +2,18 @@ body {
   margin: 0;
   padding: 0;
 
+
+@media (min-width: 0) {
+
+    article {
+     width: 14; 
+ 
+    }
+
+    }}
+
+
+
   @media (min-width: 1300px) {
     section {
       display: grid;
@@ -10,6 +22,8 @@ body {
       text-align: center;
     }
 
+    section{ margin: 1em 8em;}
+
     h1 {
       grid-column: 1 / -1;
     }
@@ -17,11 +31,11 @@ body {
       grid-column: 1 / -1;
     }
     article {
-      margin-left: 4em;
+      
       margin-bottom: 14em;
     }
   }
-}
+
 
 header {
   position: fixed;
@@ -115,11 +129,13 @@ article {
   background-color: var(--section-background) ;
   transition: 0.4s;
 
+  
 
-  svg {
+  .logo {
     grid-row-start: 1;
     justify-self: center;
     margin: 0;
+    rotate: 50deg;
   }
 
   button {
@@ -177,12 +193,12 @@ article {
   }
 }
 .uitgeklapt {
-  border: 8px solid var(--accent-dark);
+  border: 8px solid #e8f8f1;
   background-color: var(--primary-color);
   border-radius: 3em;
   margin: 1em;
   padding: 2em;
-  margin-left: 4em;
+
   display: grid;
   grid-template-rows: repeat(7, 1fr);
   text-align: center;
@@ -287,4 +303,23 @@ footer {
     text-decoration: none;
     color: white;
   }
+}
+
+
+@keyframes --rotate {
+
+0%{rotate: 0turn;}
+
+100%{rotate: 1turn;}
+  
+}
+
+
+  article:hover {
+    .wijzer{animation-name: --rotate;
+    animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-timing-function:linear;
+transform-origin: center;
+}
 }
