@@ -3,11 +3,22 @@ body {
   padding: 0;
 
 
-@media (min-width: 0) {
+@media (max-width: 440px) {
+
+
+  h1 {
+    font-size: 25px;
+  }
 
     article {
-     width: 14; 
- 
+     width: 17em; 
+
+    }
+
+     .uitgeklapt {
+     width: 17em; 
+     height: 45em;
+
     }
 
     }}
@@ -103,6 +114,7 @@ header {
   width: 1px;
 }
 
+section {padding: 1em;}
 h1 {
   margin-top: 3em;
 
@@ -111,9 +123,6 @@ h1 {
   }
 }
 
-main {
-  padding: 1.5em;
-}
 
 article {
   border: 8px solid var(--primary-color);
