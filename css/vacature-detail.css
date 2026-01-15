@@ -1,6 +1,12 @@
 body {
   margin: 0;
-  padding: 0;}
+  padding: 0;
+
+
+
+  }
+  
+
 
 header {
   position: fixed;
@@ -60,11 +66,15 @@ header {
 h1 {
   margin-top: 2em;
   padding: 1em;
+   @media (min-width: 1100px) {
+    margin-left: 40%;}}
 
-}
 
 .intro {  padding: 1em;
-max-width: 90ch;}
+max-width: 90ch;
+
+ @media (min-width: 1100px) {
+    margin-left: 25%;}}
 
 
 .label {
@@ -73,16 +83,17 @@ max-width: 90ch;}
     gap: 0.5em;
     flex-wrap: wrap;
     grid-row: 3;
-    margin-bottom: 5em;
+ @media (min-width: 1100px) {
+    margin-left: 30%;}}
 
-      li {
+      .li-label{
     background-color: #e8f8f1;
     padding: 5px 10px;
     padding-bottom: 0.5em;
     border-radius: 0.5em;
 
     border-top-left-radius: 1em;
-  }}
+  }
 
 
 /* section wordt niet getoont */
@@ -100,22 +111,23 @@ max-width: 90ch;}
   
 }
 
-a{color:white;
+a{
 text-decoration:none;
-  
-  &:hover{
-    text-decoration:underline 2px;
+
+
   } 
 
-}
+
 
 
 section {
-  height: 100vh;
+  height: 40vh;
   max-width:80ch;
   display: none;
   padding:1em;
-}
+      @media (min-width: 1100px) {
+    margin-left: 28%;}}
+
 
 .li-ul{
   
@@ -123,11 +135,21 @@ section {
     border-top-left-radius: .5em;
  border-top-right-radius: .5em;
   padding-top:1em;
-  padding-left:1em;
-  padding-right:1em;
-  
+  padding-left:.2em;
+  padding-right:.4em;
+  margin-left: 0em;
   a{  color:black;}
-}
+
+   &:hover{
+    text-decoration:underline 2px;
+  } }
+
+  .li-ul:first-child{
+    margin-left: -34px;
+    @media (min-width: 1100px) {
+    margin-left: 35%;}}
+  
+
 
 /*zonder anchor wordt de eerste tab getoont  */
  body:not(:has(.anchor:target)) { 
@@ -165,6 +187,9 @@ section {
   width: 1px;
 }
 
+button {
+  background-color: #059669;
+}
 
 
 footer {

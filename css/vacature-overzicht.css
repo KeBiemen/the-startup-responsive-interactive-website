@@ -2,35 +2,22 @@ body {
   margin: 0;
   padding: 0;
 
+text-align: center;
 
-
-
-
-    }
-
-
-
-  @media (min-width: 1300px) {
-    section {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: (2, auto);
-      text-align: center;
-    }
-
-    section{ margin: 1em 8em;}
-
-    h1 {
-      grid-column: 1 / -1;
-    }
-    p {
-      grid-column: 1 / -1;
-    }
-    article {
-      
-      margin-bottom: 14em;
-    }
+  @media (min-width: 900px) {
+    article { margin-left: 35%;
+      width: 25em;
+    
   }
+
+ 
+  }
+
+  }
+
+
+
+    
 
 
 header {
