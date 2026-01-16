@@ -1,12 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-
-
-
-  }
-  
-
+}
 
 header {
   position: fixed;
@@ -14,17 +9,30 @@ header {
   top: 0;
   width: 100%;
   z-index: 2;
-  padding: 1em;
+  padding: .5em;
   display: flex;
   justify-content: space-between;
 }
 
+
+
 .header-ul {
+  .ul-a{  
+  text-decoration: none;
+color: var(--dark-text);
+font-weight: bold;
+padding: 0 .4em;
+
+&:hover {
+color: var(--primary-color);
+}}
+
   @media (min-width: 950px) {
-    list-style: none;
+  list-style: none;
     display: flex;
-    gap: 2em;
+    gap: 1em;
   }
+
   @media (max-width: 1100px) {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
@@ -34,6 +42,26 @@ header {
     white-space: nowrap;
     width: 1px;
   }
+}
+
+.ul-button1{
+   text-decoration: none;
+   color: var(--dark-text);
+   font-weight: bold;
+  padding:.9em;
+  border: solid 1px var(--border-color);
+  border-radius: 1em;
+
+  
+}
+
+.ul-button2{
+   text-decoration: none;
+   color: var(--accent-light);
+   font-weight: bold;
+   background-color: var(--primary-color);
+   padding:.9em;
+    border-radius: 1em;
 }
 
 .header-ul-knop {
@@ -66,94 +94,100 @@ header {
 h1 {
   margin-top: 2em;
   padding: 1em;
-   @media (min-width: 1100px) {
-    margin-left: 40%;}}
-
-
-.intro {  padding: 1em;
-max-width: 90ch;
-
- @media (min-width: 1100px) {
-    margin-left: 25%;}}
-
-
-.label {
-    list-style: none;
-    display: flex;
-    gap: 0.5em;
-    flex-wrap: wrap;
-    grid-row: 3;
- @media (min-width: 1100px) {
-    margin-left: 30%;}}
-
-      .li-label{
-    background-color: #e8f8f1;
-    padding: 5px 10px;
-    padding-bottom: 0.5em;
-    border-radius: 0.5em;
-
-    border-top-left-radius: 1em;
+  @media (min-width: 1100px) {
+    margin-left: 40%;
   }
-
-
-/* section wordt niet getoont */
-
-.ul-tab{
-  display:flex;
-  list-style:none;
-  margin:1em;
-  gap:1em;
-  background-color:#059669;
-  height:3em;
-  width:100%;
-  padding-top:1.5em;
-  margin-left:0;
-  
 }
 
-a{
-text-decoration:none;
+.intro-adres{
+    padding: 1em;
+    @media (min-width: 1100px) {
+    margin-left: 30%;
+  }
+}
 
+.intro {
+  padding: 1em;
+  max-width: 90ch;
 
-  } 
+  @media (min-width: 1100px) {
+    margin-left: 25%;
+  }
+}
 
+.label {
+  list-style: none;
+  display: flex;
+  gap: 0.5em;
+  flex-wrap: wrap;
+  grid-row: 3;
+  @media (min-width: 1100px) {
+    margin-left: 30%;
+  }
+}
 
+.li-label {
+  background-color: #e8f8f1;
+  padding: 5px 10px;
+  padding-bottom: 0.5em;
+  border-radius: 0.5em;
 
+  border-top-left-radius: 1em;
+}
+
+.ul-tab {
+  display: flex;
+  list-style: none;
+  margin: 1em;
+  gap: 1em;
+  background-color: #059669;
+  height: 3em;
+  width: 100%;
+  padding-top: 1.5em;
+  margin-left: 0;
+}
+
+a {
+  text-decoration: none;
+}
 
 section {
   height: 40vh;
-  max-width:80ch;
+  max-width: 80ch;
   display: none;
-  padding:1em;
-      @media (min-width: 1100px) {
-    margin-left: 28%;}}
+  padding: 1em;
+  @media (min-width: 1100px) {
+    margin-left: 28%;
+  }
+}
 
-
-.li-ul{
-  
-  background-color:white;
-    border-top-left-radius: .5em;
- border-top-right-radius: .5em;
-  padding-top:1em;
-  padding-left:.2em;
-  padding-right:.4em;
+.li-ul {
+  background-color: white;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  padding-top: 1em;
+  padding-left: 0.2em;
+  padding-right: 0.4em;
   margin-left: 0em;
-  a{  color:black;}
+  a {
+    color: black;
+  }
 
-   &:hover{
-    text-decoration:underline 2px;
-  } }
+  &:hover {
+    text-decoration: underline 2px;
+  }
+}
 
-  .li-ul:first-child{
-    margin-left: -34px;
-    @media (min-width: 1100px) {
-    margin-left: 35%;}}
-  
-
+.li-ul:first-child {
+  margin-left: -34px;
+  @media (min-width: 1100px) {
+    margin-left: 35%;
+  }
+}
 
 /*zonder anchor wordt de eerste tab getoont  */
- body:not(:has(.anchor:target)) { 
-   #werktijden + section {
+body:not(:has(.anchor:target)) {
+  #werktijden + section {
     display: block;
   }
 }
@@ -168,15 +202,7 @@ section {
   position: absolute;
   top: 0;
 }
-
-
-
-
-
-
-
-
-
+/* display non toegangelijk */
 .visually-hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -189,13 +215,23 @@ section {
 
 button {
   background-color: #059669;
+margin-left: 50em;
+padding: 1em;
+border: none;
+margin-bottom: 1em;
+border-radius: 1em;
+font-size: medium;
+color: white;
+font-weight: bold;
 }
-
 
 footer {
   padding: 2em;
   background-color: #121827;
   color: white;
+    
+  container-type: inline-size;
+  container-name: footer;
 
   h3 {
     margin-left: 2em;
@@ -205,12 +241,14 @@ footer {
     list-style: none;
   }
 
-  li{padding: .4em};
+  li {
+    padding: 0.4em;
+  }
 
   a {
     text-decoration: none;
     color: white;
-    
   }
 }
 
+section {display: flex;}
