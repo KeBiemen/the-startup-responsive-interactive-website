@@ -1,24 +1,14 @@
+:root {
+  interpolate-size: allow-keywords; /* 👈 */
+}
+
 body {
   margin: 0;
   padding: 0;
 
-text-align: center;
-
-  @media (min-width: 900px) {
-    article { margin-left: 35%;
-      width: 25em;
-    
-  }
-
- 
-  }
-
-  }
-
-
-
-    
-
+  @media (min-width: 1300px) {
+   article{margin-left: 35em;} 
+}}
 
 header {
   position: fixed;
@@ -86,7 +76,9 @@ header {
   width: 1px;
 }
 
-section {padding: 1em;}
+main {
+  text-align: center;
+}
 h1 {
   margin-top: 3em;
   font-size: 4vw;
@@ -96,53 +88,53 @@ h1 {
   }
 }
 
-
-
-
 article {
   border: 8px solid var(--primary-color);
   border-radius: 3em;
-  margin: 3em;
-  padding: 2em;
   display: grid;
   grid-template-rows: repeat(5, auto);
   text-align: center;
-  width: 20em;
+  max-width: 28em;
+  margin: 1em;
   height: fit-content;
-
-  background-color: var(--section-background) ;
-
+  container-type: inline;
+  background-color: var(--section-background);
 
   .logo {
     grid-row-start: 1;
     justify-self: center;
-    margin: 0;
-  
+    margin: 1em;
+    margin-left: 5em;
   }
 
   .button-a {
     grid-row-start: 1;
-    height: 3em;
-    width: 3em;
     color: white;
     background-color: var(--primary-color);
     border-radius: 1em;
     border: none;
     cursor: pointer;
-      box-shadow: .2em .2em var(--accent-dark);
+    font-weight: bold;
+    margin: 1em;
+    max-height: 4em;
+
+    box-shadow: 0.2em 0.2em var(--accent-dark);
 
     &:hover {
       box-shadow: 0.1em 0.2em black;
-      translate: 0-0.4em; }
+      translate: 0-0.4em;
+    }
 
     &:active {
       box-shadow: none;
-      translate: 0 0;}
+      translate: 0 0;
+    }
   }
 
   h2 {
     grid-row-start: 2;
     font-size: 26px;
+    margin-left: 2em;
   }
 
   ul {
@@ -151,12 +143,13 @@ article {
     gap: 0.5em;
     flex-wrap: wrap;
     grid-row: 3;
+    margin-left: 3em;
   }
 
   li {
     background-color: #e8f8f1;
-    padding: 5px 10px;
-    padding-bottom: 0.5em;
+    padding: 0.5em;
+
     border-radius: 0.5em;
   }
 
@@ -167,38 +160,36 @@ article {
     color: white;
     border-radius: 1em;
     font-weight: bold;
-    height: 2em;
-    padding-top: 1em;
     justify-self: center;
-    width: 15em;
-    margin-top: 1em;
-      box-shadow: .2em .2em var(--accent-dark);
+    padding: 1em;
+    margin: 1em;
+    margin-left: 5em;
+    box-shadow: 0.2em 0.2em var(--accent-dark);
   }
 
-    p {
-    height:0;
-
-    display:block;
+  p {
+    height: 0;
+    display: block;
     grid-row-start: 4;
-    border-left: .3em solid rgb(255, 255, 255);
+    border-left: 0.3em solid rgb(255, 255, 255);
     color: var(--accent-light);
-    padding: .3em;
-    overflow:hidden;
-    
-    transition-duration:.5s;
-    transition-timing-function:cubic-bezier(.5, 1.6, .9, 1.6);
+    padding: 0.3em;
+    overflow: hidden;
+
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.9, 1.6);
   }
 }
 
-    a:hover {
-      box-shadow: 0.1em 0.2em black;
-      translate: 0-0.4em;
-    }
+a:hover {
+  box-shadow: 0.1em 0.2em black;
+  translate: 0-0.4em;
+}
 
-    a:active {
-      box-shadow: none;
-      translate: 0 0;
-    }
+a:active {
+  box-shadow: none;
+  translate: 0 0;
+}
 
 .uitgeklapt {
   border: 8px solid #e8f8f1;
@@ -212,21 +203,21 @@ article {
 
   .button-a {
     background-color: white;
+    color: black;
   }
 
   h2 {
     color: var(--accent-light);
   }
 
-
   a {
     background-color: var(--accent-light);
     color: var(--accent-dark);
-   
   }
   p {
     height: auto;
-
+    margin: 1em;
+    margin-left: 5em;
   }
 }
 
@@ -235,41 +226,40 @@ footer {
   background-color: #121827;
   color: white;
 
-    h3 {
-      margin-left: 2em;
-    }
+  h3 {
+    margin-left: 2em;
+  }
 
-    ul {
-      list-style: none;
-    }
+  ul {
+    list-style: none;
+  }
 
-    li{
-      padding: .3em;
-    }
+  li {
+    padding: 0.3em;
+  }
 
-    a {
-      text-decoration: none;
-      color: white;
-
-    }
+  a {
+    text-decoration: none;
+    color: white;
+  }
 }
-
 
 @keyframes --rotate {
+  0% {
+    rotate: 0turn;
+  }
 
-0%{rotate: 0turn;}
-
-100%{rotate: 1turn;}
-  
+  100% {
+    rotate: 1turn;
+  }
 }
 
-  article:hover {
-    .wijzer{animation-name: --rotate;
+article:hover {
+  .wijzer {
+    animation-name: --rotate;
     animation-iteration-count: infinite;
-  animation-duration: 3s;
-  animation-timing-function:linear;
-transform-origin: center;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    transform-origin: center;
+  }
 }
-}
-
-  
