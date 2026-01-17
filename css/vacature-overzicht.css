@@ -134,6 +134,7 @@ article {
   height: fit-content;
   container-type: inline;
   background-color: var(--section-background);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
   .logo {
     grid-row-start: 1;
@@ -215,7 +216,8 @@ article {
     transition-timing-function: cubic-bezier(0.5, 1.6, 0.9, 1.6);
   }
 
-     &:hover {
+     h2:hover {
+
      color: var(--primary-color);
     }
 
@@ -241,9 +243,18 @@ article {
     }
   }
 
-  .button-a {
-    background-color: white;
+
+.button-a{ background-color: white;
+  color: #12182700;
+ max-width: 7em;
+ padding-top: 1em;
+}
+ 
+  .button-a::before  {
+    content: "Lees minder";
     color: black;
+      
+
   }
 
   h2 {
