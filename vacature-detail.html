@@ -181,6 +181,30 @@
         <li> Wekelijkse borrels en personeelsuitjes om successen samen te vieren en te ontspannen.</li>
       </ul>
 </section> 
+
+<button class="solliciteer-knop" popovertarget="popup">Solliciteer</button>
+
+<dialog popover id="popup">
+  <form>
+    <h2>Durf jij de uitdaging aan?</h2>
+    <label for="Naam">Naam</label>
+    <input type="text" id="Naam" name="Naam" placeholder="Naam"/>
+ 
+    <label for="email">E-mailadres</label>
+    <input type="email" id="email" name="email" placeholder="E-mailadres"/>
+    
+    <label for="Telefoonnummer">Telefoonnummer</label>
+    <input type="tel" id="Telefoonnummer" name="Telefoonnummer" placeholder="Telefoonnummer"/>
+  </form>
+  
+    <label for="Upload-je-CV">Upload je CV</label>
+    <input type="file" id="Upload-je-CV" name="Upload-je-CV" /> 
+  
+    <label for="motivatie">Schrijf je motivatie hier</label>
+    <input type="text" id="motivatie" name="motivatie" placeholder="motivatie"/>
+
+  <button popovertarget="popup" popovertargetaction="hide">solliciteer</button>
+</dialog>
     </main>
 
          <footer>

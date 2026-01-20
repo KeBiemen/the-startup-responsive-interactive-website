@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
 
-
+/* header */
 }
 header {
   position: fixed;
@@ -103,6 +103,8 @@ header {
   white-space: nowrap;
   width: 1px;
 }
+
+/* main */
 h1 {
   margin-top: 2em;
   padding: 1em;
@@ -174,7 +176,7 @@ a {
 }
 
 section {
-  height: 50vh;
+  height: 40vh;
   max-width: 80ch;
   display: none;
   padding: 1em;
@@ -220,6 +222,34 @@ body:not(:has(.anchor:target)) {
   top: 0;
 }
 
+.solliciteer-knop{color: var(--accent-light);
+background-color: var(--primary-color);
+padding: 1em;
+margin: 5em 10em;
+border: none;
+border-radius: 1em;
+font-weight: bold;
+width: 10em;
+
+ @media (min-width: 1100px) {
+    margin-left: 46%;
+  }}
+
+  h2{color:var(--primary-color);}
+
+input {
+  display: flex;
+  align-items: flex-start;
+  margin: 10px;
+  padding: 20px 24px;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+ 
+}
+
+label{display:none;}
+
+
 footer {
   padding: 2em;
   background-color: #121827;
@@ -241,4 +271,6 @@ footer {
     text-decoration: none;
     color: white;
   }
+
+
 }
