@@ -29,13 +29,24 @@ tabbladen
 in de detail pagina is de informatie opgedeeld in tabbladen.
 https://github.com/user-attachments/assets/e56cc00a-0872-4e56-83a8-a27f2c036c72
 
+### responsive
+<img width="850" height="400" alt="afbeelding" src="https://github.com/user-attachments/assets/18046cd8-e5da-4efc-b1ec-c960b6dfa132" />
+<img width="250" height="450" alt="afbeelding" src="https://github.com/user-attachments/assets/536be7aa-b52b-4f86-9a69-bd023a6374d6" />
+
+### Toegankelijkheid
+voor toegangelijkheid heb it titles en aria labels toegevoegd voor de screenreader. en ik heb een wcag test gedaan en wat extra beschrijvende tekst erbij geschreven.
 
 
+### Huisstijl
+wat er terug te zien is van de huisstijl zijn de kleuren en het logo. de groene en witte kleur slagen niet voor de colorcontrast test voor normale tekst, daarom zijn deze kleuren vooral het meest bijelkaar gebrijkt met grootte tekst.
 <!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
 <!-- Voeg een mooie poster visual toe 📸 -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
 
 ## Kenmerken
+HTML
+
+bestaat uit een body met daarin een header, main en een footer.
 
 CSS
 
