@@ -274,7 +274,7 @@ article {
        h2:hover {
 
      color: var(--accent-dark);
-}
+}}
 
 footer {
   padding: 2em;
@@ -317,4 +317,4 @@ article:hover {
     animation-timing-function: linear;
     transform-origin: center;
   }
-}
+}}
